@@ -16,7 +16,7 @@ export function WaitlistSection() {
   return (
     <section
       id={sectionIds.waitlist}
-      className="bg-off-white py-24 lg:py-28"
+      className="py-24 lg:py-28"
       aria-labelledby="waitlist-heading"
     >
       <div className="container-page max-w-xl text-center">

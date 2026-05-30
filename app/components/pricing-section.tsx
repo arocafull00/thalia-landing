@@ -5,7 +5,7 @@ export function PricingSection() {
   return (
     <section
       id={sectionIds.precios}
-      className="bg-background py-20 lg:py-24"
+      className="py-20 lg:py-24"
       aria-labelledby="pricing-heading"
     >
       <div className="container-page max-w-2xl text-center">

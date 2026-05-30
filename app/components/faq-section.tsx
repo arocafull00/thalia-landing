@@ -26,7 +26,7 @@ export function FaqSection() {
   return (
     <section
       id={sectionIds.faq}
-      className="bg-background py-24 lg:py-32"
+      className="py-24 lg:py-32"
       aria-labelledby="faq-heading"
     >
       <div className="container-page max-w-3xl">

@@ -26,6 +26,7 @@
   --warm-gray: #f0f0f0;
   --off-white: #faf9f6;
   --thalia-gold: #d4af37;
+  --grid-line: rgb(116 120 120 / 0.04);
   --shadow-soft: 0 4px 8px rgb(26 26 26 / 0.06);
   --z-header: 20;
   --z-dialog: 50;
@@ -83,9 +84,31 @@
   }
 
   body {
-    background: var(--background);
+    position: relative;
+    isolation: isolate;
+    background-color: var(--off-white);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 14px 24px;
     color: var(--on-surface);
     font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    height: 310px;
+    width: 310px;
+    translate: -50% 0;
+    border-radius: 9999px;
+    background: var(--thalia-gold);
+    opacity: 0.18;
+    filter: blur(100px);
+    pointer-events: none;
   }
 
   h1,

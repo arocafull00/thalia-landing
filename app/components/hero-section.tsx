@@ -12,7 +12,7 @@ const trustItems = [
 export function HeroSection() {
   return (
     <section
-      className="bg-off-white pt-28 pb-16 lg:pt-36 lg:pb-24"
+      className="pt-28 pb-16 lg:pt-36 lg:pb-24"
       aria-labelledby="hero-heading"
     >
       <div className="container-page">
