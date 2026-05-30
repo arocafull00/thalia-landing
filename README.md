@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thalia
 
-## Getting Started
+**Thalia** es una aplicación de gestión integral para clínicas estéticas y de belleza. Centraliza en un solo lugar la agenda, los pacientes, el equipo, el inventario y las finanzas de la clínica.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ¿Qué es Thalia?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Thalia ayuda a clínicas estéticas a organizar su día a día sin depender de hojas de cálculo, agendas en papel o varias herramientas desconectadas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Con Thalia, el personal de la clínica puede:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Gestionar citas** — Ver la agenda del día, reservar tratamientos, reprogramar o cancelar visitas y consultar el detalle de cada cita.
+- **Llevar fichas de pacientes** — Registrar datos de contacto, historial de visitas y documentación asociada a cada paciente.
+- **Coordinar al equipo** — Asignar profesionales a las citas, distinguirlos en el calendario y gestionar roles (administración, recepción, médicos, auxiliares).
+- **Controlar el inventario** — Registrar productos y materiales, hacer entradas y salidas de stock y recibir alertas cuando un producto está por debajo del mínimo.
+- **Registrar la actividad económica** — Anotar ingresos y gastos, vincular cobros a citas y consultar un resumen financiero.
+- **Configurar tratamientos** — Definir el catálogo de tratamientos de la clínica, con duración, precio y materiales asociados.
 
-## Learn More
+La app está pensada para usarse desde el móvil, la tablet o el navegador, de modo que recepción, profesionales y administración puedan consultar la misma información actualizada en tiempo real.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+En el futuro, Thalia incluirá recordatorios automáticos por WhatsApp para reducir ausencias y un panel de resumen con las métricas más relevantes del día.
