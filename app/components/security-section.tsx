@@ -2,6 +2,7 @@ import { KeyRound, Lock, Shield } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { sectionIds } from "../lib/sections";
 import { PhoneFrame } from "./ui/device-frame";
+import { Reveal } from "./ui/reveal";
 
 type SecurityFeature = {
   icon: LucideIcon;
@@ -57,28 +58,34 @@ export function SecuritySection() {
     >
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          <PhoneFrame
-            src="/images/security-mobile.png"
-            alt="Pantalla de configuración de seguridad en Thalia"
-            fallbackLabel="Añade security-mobile.png en public/images/"
-          />
+          <Reveal variant="left">
+            <PhoneFrame
+              src="/images/security-mobile.png"
+              alt="Pantalla de configuración de seguridad en Thalia"
+              fallbackLabel="Añade security-mobile.png en public/images/"
+            />
+          </Reveal>
           <div className="space-y-10">
-            <div className="space-y-4">
-              <h2
-                id="security-heading"
-                className="text-headline text-soft-black"
-              >
-                Seguridad pensada para datos clínicos
-              </h2>
-              <p className="text-body-lg max-w-xl text-on-surface-variant">
-                Tus fichas de pacientes y movimientos económicos merecen controles
-                claros. Thalia separa permisos, protege el acceso y mantiene la
-                información centralizada.
-              </p>
-            </div>
+            <Reveal variant="right">
+              <div className="space-y-4">
+                <h2
+                  id="security-heading"
+                  className="text-headline text-soft-black"
+                >
+                  Seguridad pensada para datos clínicos
+                </h2>
+                <p className="text-body-lg max-w-xl text-on-surface-variant">
+                  Tus fichas de pacientes y movimientos económicos merecen controles
+                  claros. Thalia separa permisos, protege el acceso y mantiene la
+                  información centralizada.
+                </p>
+              </div>
+            </Reveal>
             <div className="space-y-8">
-              {features.map((feature) => (
-                <SecurityFeatureRow key={feature.title} {...feature} />
+              {features.map((feature, index) => (
+                <Reveal key={feature.title} delay={index * 90} variant="right">
+                  <SecurityFeatureRow {...feature} />
+                </Reveal>
               ))}
             </div>
           </div>

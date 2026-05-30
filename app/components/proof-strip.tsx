@@ -1,5 +1,6 @@
 import { Calendar, ClipboardList, Package, Wallet } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Reveal } from "./ui/reveal";
 
 type ProofItem = {
   icon: LucideIcon;
@@ -59,13 +60,17 @@ export function ProofStrip() {
         <h2 id="proof-heading" className="sr-only">
           Qué resuelve Thalia en el día a día
         </h2>
-        <div className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-6 md:p-10 shadow-card">
-          <div className="grid grid-cols-1 gap-8 divide-y divide-outline-variant md:grid-cols-4 md:gap-4 md:divide-x md:divide-y-0">
-            {proofItems.map((item) => (
-              <ProofStripItem key={item.title} {...item} />
-            ))}
+        <Reveal variant="up">
+          <div className="card-lift rounded-2xl border border-outline-variant bg-surface-container-lowest p-6 md:p-10 shadow-card">
+            <div className="grid grid-cols-1 gap-8 divide-y divide-outline-variant md:grid-cols-4 md:gap-4 md:divide-x md:divide-y-0">
+              {proofItems.map((item, index) => (
+                <Reveal key={item.title} delay={index * 80}>
+                  <ProofStripItem {...item} />
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -17,12 +17,12 @@ export function TechnologyFeatureItem({
         type="button"
         onClick={onSelect}
         aria-current={isActive ? "true" : undefined}
-        className="group flex w-full items-center justify-between gap-6 py-4 text-left transition-colors duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-on-primary"
+        className="group flex w-full items-center justify-between gap-6 py-4 text-left transition-[transform,color] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-on-primary active:scale-[0.99]"
       >
         <span className="flex min-w-0 items-center gap-4">
           <span
-            className={`h-7 w-0.5 shrink-0 bg-on-primary transition-opacity duration-200 ease-out ${
-              isActive ? "opacity-100" : "opacity-0"
+            className={`h-7 w-0.5 shrink-0 origin-top bg-on-primary transition-[opacity,transform] duration-300 ease-out ${
+              isActive ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
             }`}
             aria-hidden
           />

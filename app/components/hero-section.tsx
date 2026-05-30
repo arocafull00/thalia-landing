@@ -20,16 +20,16 @@ export function HeroSection() {
           <div className="max-w-2xl">
             <h1
               id="hero-heading"
-              className="text-display text-soft-black"
+              className="hero-enter hero-enter-1 text-display text-soft-black"
             >
               Gestiona toda tu clínica estética desde un único lugar.
             </h1>
-            <p className="text-body-lg mt-6 max-w-xl text-on-surface-variant">
+            <p className="hero-enter hero-enter-2 text-body-lg mt-6 max-w-xl text-on-surface-variant">
               Agenda, pacientes, stock, equipo y finanzas en una sola plataforma
               diseñada para clínicas estéticas que quieren crecer sin el caos
               administrativo.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="hero-enter hero-enter-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href={`#${sectionIds.demo}`}>Solicitar demo</Button>
               <Button
                 href="#"
@@ -40,7 +40,7 @@ export function HeroSection() {
                 Ver vídeo (2 min)
               </Button>
             </div>
-            <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
+            <ul className="hero-enter hero-enter-4 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
               {trustItems.map((item) => (
                 <li
                   key={item}
@@ -55,11 +55,11 @@ export function HeroSection() {
               ))}
             </ul>
           </div>
-          <div className="hidden lg:block">
+          <div className="hero-enter hero-enter-5 hidden lg:block">
             <HeroDeviceFrame />
           </div>
         </div>
-        <div className="mt-12 lg:hidden">
+        <div className="hero-enter hero-enter-5 mt-12 lg:hidden">
           <HeroDeviceFrame />
         </div>
       </div>

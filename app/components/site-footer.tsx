@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal } from "./ui/reveal";
 
 type FooterLink = {
   label: string;
@@ -68,18 +69,21 @@ export function SiteFooter() {
     <footer className="border-t border-outline-variant bg-off-white py-16">
       <div className="container-page">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+          <Reveal className="lg:col-span-2">
             <p className="text-2xl font-semibold text-soft-black">Thalia</p>
             <p className="text-body-lg mt-4 max-w-sm text-on-surface-variant">
               Software de gestión para clínicas estéticas: agenda, pacientes,
               inventario, equipo y finanzas en un solo lugar.
             </p>
-          </div>
-          {footerColumns.map((column) => (
-            <FooterColumnBlock key={column.title} {...column} />
+          </Reveal>
+          {footerColumns.map((column, index) => (
+            <Reveal key={column.title} delay={index * 60} variant="fade">
+              <FooterColumnBlock {...column} />
+            </Reveal>
           ))}
         </div>
-        <div className="mt-12 flex flex-col gap-6 border-t border-outline-variant pt-8 md:flex-row md:items-center md:justify-between">
+        <Reveal delay={180}>
+          <div className="mt-12 flex flex-col gap-6 border-t border-outline-variant pt-8 md:flex-row md:items-center md:justify-between">
           <ul className="flex flex-wrap gap-6">
             {legalLinks.map((link) => (
               <li key={link.label}>
@@ -106,10 +110,13 @@ export function SiteFooter() {
               LinkedIn
             </Link>
           </div>
-        </div>
-        <p className="text-caption mt-8 text-on-surface-variant">
-          © {new Date().getFullYear()} Thalia. Todos los derechos reservados.
-        </p>
+          </div>
+        </Reveal>
+        <Reveal delay={240}>
+          <p className="text-caption mt-8 text-on-surface-variant">
+            © {new Date().getFullYear()} Thalia. Todos los derechos reservados.
+          </p>
+        </Reveal>
       </div>
     </footer>
   );

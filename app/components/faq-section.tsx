@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { sectionIds } from "../lib/sections";
 import { FaqItem } from "./ui/faq-item";
+import { Reveal } from "./ui/reveal";
 
 const faqEntries = [
   {
@@ -29,22 +30,26 @@ export function FaqSection() {
       aria-labelledby="faq-heading"
     >
       <div className="container-page max-w-3xl">
-        <h2
-          id="faq-heading"
-          className="text-headline text-center text-soft-black"
-        >
-          Preguntas frecuentes
-        </h2>
+        <Reveal>
+          <h2
+            id="faq-heading"
+            className="text-headline text-center text-soft-black"
+          >
+            Preguntas frecuentes
+          </h2>
+        </Reveal>
         <div className="mt-12">
-          {faqEntries.map((entry) => (
-            <FaqItem
-              key={entry.question}
-              question={entry.question}
-              answer={entry.answer}
-            />
+          {faqEntries.map((entry, index) => (
+            <Reveal key={entry.question} delay={index * 70}>
+              <FaqItem
+                question={entry.question}
+                answer={entry.answer}
+              />
+            </Reveal>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <Reveal delay={210}>
+          <div className="mt-10 text-center">
           <Link
             href="#"
             className="link-interactive inline-flex items-center gap-1 text-body-md font-medium text-soft-black underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
@@ -52,7 +57,8 @@ export function FaqSection() {
             Ver todas las preguntas
             <ChevronRight className="h-4 w-4" aria-hidden />
           </Link>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

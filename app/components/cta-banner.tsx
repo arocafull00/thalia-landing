@@ -1,5 +1,6 @@
 import { sectionIds } from "../lib/sections";
 import { Button } from "./ui/button";
+import { Reveal } from "./ui/reveal";
 
 export function CtaBanner() {
   return (
@@ -9,7 +10,8 @@ export function CtaBanner() {
       aria-labelledby="cta-heading"
     >
       <div className="container-page">
-        <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-inverse-surface px-8 py-10 md:flex-row md:items-center md:px-12 md:py-12">
+        <Reveal variant="scale">
+          <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-inverse-surface px-8 py-10 md:flex-row md:items-center md:px-12 md:py-12">
           <div className="max-w-xl">
             <h2
               id="cta-heading"
@@ -30,7 +32,8 @@ export function CtaBanner() {
               Sin compromiso
             </p>
           </div>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

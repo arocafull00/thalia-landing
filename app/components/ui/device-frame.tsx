@@ -7,7 +7,7 @@ const MOBILE_FALLBACK =
 
 export function HeroDeviceFrame() {
   return (
-    <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none">
+    <div className="hero-device-float relative mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-outline-variant bg-surface-container-lowest shadow-card">
         <ProductImage
           src="/images/dashboard-desktop.png"

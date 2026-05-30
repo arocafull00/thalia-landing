@@ -16,7 +16,15 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -39,7 +47,9 @@ export function SiteHeader() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-[var(--z-header)] border-b border-warm-gray bg-off-white/95 backdrop-blur-sm">
+    <header
+      className={`header-enter header-scroll sticky top-0 z-[var(--z-header)] border-b border-warm-gray bg-off-white/95 backdrop-blur-sm ${scrolled ? "header-scroll-scrolled" : ""}`}
+    >
       <div className="container-page flex h-20 items-center justify-between gap-6">
         <Link
           href="/"

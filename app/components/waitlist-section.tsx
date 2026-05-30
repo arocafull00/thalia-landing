@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { sectionIds } from "../lib/sections";
 import { Button } from "./ui/button";
+import { Reveal } from "./ui/reveal";
 
 export function WaitlistSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -19,16 +20,18 @@ export function WaitlistSection() {
       aria-labelledby="waitlist-heading"
     >
       <div className="container-page max-w-xl text-center">
-        <h2
-          id="waitlist-heading"
-          className="text-headline text-soft-black"
-        >
-          Sé el primero en probar Thalia
-        </h2>
-        <p className="text-body-lg mt-4 text-on-surface-variant">
-          Déjanos tu correo y te avisaremos cuando abramos el acceso anticipado
-          para tu clínica.
-        </p>
+        <Reveal>
+          <h2
+            id="waitlist-heading"
+            className="text-headline text-soft-black"
+          >
+            Sé el primero en probar Thalia
+          </h2>
+          <p className="text-body-lg mt-4 text-on-surface-variant">
+            Déjanos tu correo y te avisaremos cuando abramos el acceso anticipado
+            para tu clínica.
+          </p>
+        </Reveal>
         {submitted ? (
           <p
             className="status-enter text-body-lg mt-8 font-medium text-secondary"
@@ -37,10 +40,11 @@ export function WaitlistSection() {
             Gracias. Te contactaremos cuando haya plazas disponibles.
           </p>
         ) : (
-          <form
-            className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch"
-            onSubmit={handleSubmit}
-          >
+          <Reveal delay={120}>
+            <form
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch"
+              onSubmit={handleSubmit}
+            >
             <label htmlFor="waitlist-email" className="sr-only">
               Correo electrónico
             </label>
@@ -56,7 +60,8 @@ export function WaitlistSection() {
             <Button type="submit" className="shrink-0 sm:px-8">
               Solicitar acceso
             </Button>
-          </form>
+            </form>
+          </Reveal>
         )}
       </div>
     </section>
