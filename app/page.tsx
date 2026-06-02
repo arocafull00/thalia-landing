@@ -3,7 +3,7 @@ import { FaqSection } from "./components/faq-section";
 import { HeroSection } from "./components/hero-section";
 import { PricingSection } from "./components/pricing-section";
 import { ProofStrip } from "./components/proof-strip";
-import { SecuritySection } from "./components/security-section";
+import { TeamSection } from "./components/team-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { TechnologySection } from "./components/technology-section";
@@ -16,7 +16,7 @@ export default function Home() {
       <main id="contenido-principal">
         <HeroSection />
         <ProofStrip />
-        <SecuritySection />
+        <TeamSection />
         <TechnologySection />
         <PricingSection />
         <FaqSection />

@@ -7,8 +7,8 @@ const MOBILE_FALLBACK =
 
 export function HeroDeviceFrame() {
   return (
-    <div className="relative mx-auto w-full min-w-0 max-w-3xl sm:max-w-4xl lg:mx-0 lg:max-w-none">
-      <div className="relative aspect-[5/3] min-h-[min(52vw,280px)] w-full overflow-hidden rounded-2xl border border-outline-variant bg-surface-container-lowest shadow-card sm:min-h-[min(48vw,360px)] lg:aspect-[16/10] lg:min-h-[min(42vh,480px)]">
+    <figure className="hero-visual">
+      <div className="hero-visual__desktop">
         <ProductImage
           src="/images/dashboard-desktop.png"
           alt="Panel de Thalia en escritorio con agenda y pacientes"
@@ -19,7 +19,7 @@ export function HeroDeviceFrame() {
           fallbackLabel={DESKTOP_FALLBACK}
         />
       </div>
-      <div className="absolute -right-2 top-[12%] z-10 w-[44%] min-w-[140px] max-w-[280px] overflow-hidden rounded-2xl border-4 border-surface-container-lowest shadow-card sm:-right-4 sm:max-w-[300px] lg:-right-6 lg:w-[42%] lg:max-w-[320px]">
+      <div className="hero-visual__mobile">
         <ProductImage
           src="/images/dashboard-mobile.png"
           alt="Vista móvil de la agenda de Thalia"
@@ -29,7 +29,7 @@ export function HeroDeviceFrame() {
           fallbackLabel={MOBILE_FALLBACK}
         />
       </div>
-    </div>
+    </figure>
   );
 }
 

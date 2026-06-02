@@ -16,8 +16,8 @@ export function HeroSection() {
       aria-labelledby="hero-heading"
     >
       <div className="container-page">
-        <div className="hero-enter hero-split">
-          <div className="split-panel split-panel--content max-w-none py-8 lg:py-12 lg:pr-12">
+        <div className="hero-enter hero__grid">
+          <div className="hero__content">
             <h1
               id="hero-heading"
               className="text-display min-w-0 text-soft-black"
@@ -51,11 +51,7 @@ export function HeroSection() {
               ))}
             </ul>
           </div>
-          <div
-            className="hero-split__divider"
-            aria-hidden
-          />
-          <div className="split-panel split-panel--content py-6 lg:py-8 lg:pl-4 xl:pl-6">
+          <div className="hero__visual">
             <HeroDeviceFrame />
           </div>
         </div>

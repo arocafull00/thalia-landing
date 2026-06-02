@@ -51,39 +51,41 @@ export function SiteHeader() {
     <header
       className={`header-enter header-scroll sticky top-0 z-[var(--z-header)] bg-off-white/95 backdrop-blur-sm ${scrolled ? "header-scroll-scrolled border-b border-transparent" : "border-b border-outline-variant"}`}
     >
-      <div className="container-page pt-6 pb-4">
-        <div className="flex items-end justify-between gap-6">
-          <SiteLogo size={48} />
-          <p className="hidden text-right text-label-md uppercase tracking-widest text-on-surface-variant sm:block">
-            Software para clínicas estéticas
-          </p>
-        </div>
-        <div className="mt-5 flex items-center justify-between gap-6">
+      <div className="container-page py-2.5 sm:py-3">
+        <div className="flex h-10 items-center justify-between gap-4 sm:h-11">
+          <SiteLogo size={36} />
           <nav
-            className="hidden items-center gap-8 md:flex"
+            className="hidden flex-1 items-center justify-center gap-5 md:flex lg:gap-7"
             aria-label="Principal"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="link-interactive text-body-md font-medium text-on-surface-variant focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
+                className="link-interactive text-sm font-medium text-on-surface-variant focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <Button href={`#${sectionIds.demo}`}>Solicitar demo</Button>
-          <button
-            type="button"
-            className="pressable ml-auto flex h-11 w-11 items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black md:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            onClick={() => setOpen(true)}
-          >
-            <Menu className="h-6 w-6" aria-hidden />
-            <span className="sr-only">Abrir menú</span>
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <Button
+              href={`#${sectionIds.demo}`}
+              className="hidden min-h-9 px-4 py-2 text-sm md:inline-flex"
+            >
+              Solicitar demo
+            </Button>
+            <button
+              type="button"
+              className="pressable flex h-9 w-9 items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black md:hidden"
+              aria-expanded={open}
+              aria-controls="mobile-nav"
+              onClick={() => setOpen(true)}
+            >
+              <Menu className="h-5 w-5" aria-hidden />
+              <span className="sr-only">Abrir menú</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -100,13 +102,13 @@ export function SiteHeader() {
       >
         <div className="flex h-full flex-col p-6">
           <div className="flex items-center justify-between">
-            <SiteLogo size={40} href={null} />
+            <SiteLogo size={36} href={null} />
             <button
               type="button"
-              className="pressable flex h-11 w-11 items-center justify-center rounded-lg hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
+              className="pressable flex h-9 w-9 items-center justify-center rounded-lg hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
               onClick={closeMenu}
             >
-              <X className="h-6 w-6" aria-hidden />
+              <X className="h-5 w-5" aria-hidden />
               <span className="sr-only">Cerrar menú</span>
             </button>
           </div>

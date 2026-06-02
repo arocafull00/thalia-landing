@@ -2,30 +2,30 @@ import { sectionIds } from "../lib/sections";
 import { PhoneFrame } from "./ui/device-frame";
 import { Reveal } from "./ui/reveal";
 
-type SecurityFeature = {
+type TeamFeature = {
   title: string;
   description: string;
 };
 
-const features: SecurityFeature[] = [
+const features: TeamFeature[] = [
   {
-    title: "Datos cifrados en tránsito y en reposo",
+    title: "Agenda compartida al instante",
     description:
-      "La información clínica y financiera viaja y se almacena con cifrado estándar del sector.",
+      "Citas, cambios y profesional asignado visibles para recepción y para cada profesional sin llamadas de confirmación.",
   },
   {
-    title: "Acceso por roles",
+    title: "Ficha del paciente donde toca",
     description:
-      "Recepción, profesionales y administración ven solo lo que su función requiere.",
+      "Historial, tratamientos y notas de la visita accesibles en recepción y en cabina, sin capturas ni hojas sueltas.",
   },
   {
-    title: "Copias y trazabilidad",
+    title: "Cada rol ve lo que necesita",
     description:
-      "Respaldo periódico y registro de acciones para auditar cambios sensibles.",
+      "Recepción, profesionales y administración trabajan sobre los mismos datos con permisos acordes a su función.",
   },
 ];
 
-function SecurityFeatureRow({ title, description }: SecurityFeature) {
+function TeamFeatureRow({ title, description }: TeamFeature) {
   return (
     <div className="border-t border-outline-variant py-6 first:border-t-0 first:pt-0">
       <h3 className="text-title text-soft-black">{title}</h3>
@@ -34,19 +34,19 @@ function SecurityFeatureRow({ title, description }: SecurityFeature) {
   );
 }
 
-export function SecuritySection() {
+export function TeamSection() {
   return (
     <section
       id={sectionIds.funciones}
       className="split-section border-t border-outline-variant"
-      aria-labelledby="security-heading"
+      aria-labelledby="team-heading"
     >
       <div className="split-panel split-panel--media flex items-center justify-center bg-surface-container-low py-12 lg:py-0">
         <Reveal variant="left" className="w-full max-w-[320px] px-6 lg:max-w-none lg:px-12">
           <PhoneFrame
-            src="/images/security-mobile.png"
-            alt="Pantalla de configuración de seguridad en Thalia"
-            fallbackLabel="Añade security-mobile.png en public/images/"
+            src="/images/team-mobile.png"
+            alt="Recepción y profesional consultando la misma agenda en Thalia"
+            fallbackLabel="Añade team-mobile.png en public/images/"
           />
         </Reveal>
       </div>
@@ -54,22 +54,23 @@ export function SecuritySection() {
         <Reveal variant="right">
           <div className="max-w-xl space-y-4">
             <h2
-              id="security-heading"
+              id="team-heading"
               className="text-headline min-w-0 text-soft-black"
             >
-              Seguridad pensada para datos clínicos
+              Todo el equipo con la misma información
             </h2>
             <p className="text-body-lg text-on-surface-variant">
-              Tus fichas de pacientes y movimientos económicos merecen controles
-              claros. Thalia separa permisos, protege el acceso y mantiene la
-              información centralizada.
+              Recepción, profesionales y quien gestiona la clínica dejan de
+              contrastar WhatsApp, Excel y la agenda de papel. Thalia mantiene
+              agenda, ficha y movimientos alineados en móvil, tablet y
+              navegador.
             </p>
           </div>
         </Reveal>
         <div className="mt-10 max-w-xl">
           {features.map((feature, index) => (
             <Reveal key={feature.title} delay={index * 90} variant="right">
-              <SecurityFeatureRow {...feature} />
+              <TeamFeatureRow {...feature} />
             </Reveal>
           ))}
         </div>
