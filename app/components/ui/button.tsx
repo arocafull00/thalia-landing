@@ -7,9 +7,9 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-soft-black text-on-primary hover:bg-inverse-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black",
   secondary:
-    "bg-surface-container-lowest border border-outline-variant text-soft-black hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black",
+    "border border-outline-variant bg-transparent text-soft-black hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black",
   inverse:
-    "bg-surface-container-lowest text-soft-black hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-on-surface",
+    "border border-surface-container-lowest bg-transparent text-inverse-on-surface hover:bg-surface-container-low/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-on-surface",
 };
 
 type ButtonBaseProps = {
@@ -32,7 +32,7 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
     ...rest
   } = props;
 
-  const classes = `pressable inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium ${variantClasses[variant]} ${className}`;
+  const classes = `pressable inline-flex min-h-11 items-center justify-center gap-2 rounded px-6 py-3 text-sm font-medium ${variantClasses[variant]} ${className}`;
 
   if ("href" in props && props.href) {
     const { href, ...linkRest } = rest as ComponentPropsWithoutRef<typeof Link>;

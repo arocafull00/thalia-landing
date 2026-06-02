@@ -12,35 +12,31 @@ const trustItems = [
 export function HeroSection() {
   return (
     <section
-      className="pt-28 pb-16 lg:pt-36 lg:pb-24"
+      className="pt-8 pb-16 lg:pb-24"
       aria-labelledby="hero-heading"
     >
       <div className="container-page">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-2xl">
+        <div className="hero-enter hero-split">
+          <div className="split-panel split-panel--content max-w-none py-8 lg:py-12 lg:pr-12">
             <h1
               id="hero-heading"
-              className="hero-enter hero-enter-1 text-display text-soft-black"
+              className="text-display min-w-0 text-soft-black"
             >
               Gestiona toda tu clínica estética desde un único lugar.
             </h1>
-            <p className="hero-enter hero-enter-2 text-body-lg mt-6 max-w-xl text-on-surface-variant">
+            <p className="text-body-lg mt-6 max-w-xl text-on-surface-variant">
               Agenda, pacientes, stock, equipo y finanzas en una sola plataforma
               diseñada para clínicas estéticas que quieren crecer sin el caos
               administrativo.
             </p>
-            <div className="hero-enter hero-enter-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href={`#${sectionIds.demo}`}>Solicitar demo</Button>
-              <Button
-                href="#"
-                variant="secondary"
-                className="gap-2"
-              >
+              <Button href="#" variant="secondary" className="gap-2">
                 <Play className="h-4 w-4 fill-soft-black" aria-hidden />
                 Ver vídeo (2 min)
               </Button>
             </div>
-            <ul className="hero-enter hero-enter-4 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
+            <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
               {trustItems.map((item) => (
                 <li
                   key={item}
@@ -55,12 +51,13 @@ export function HeroSection() {
               ))}
             </ul>
           </div>
-          <div className="hero-enter hero-enter-5 hidden lg:block">
+          <div
+            className="hero-split__divider"
+            aria-hidden
+          />
+          <div className="split-panel split-panel--content py-6 lg:py-8 lg:pl-4 xl:pl-6">
             <HeroDeviceFrame />
           </div>
-        </div>
-        <div className="hero-enter hero-enter-5 mt-12 lg:hidden">
-          <HeroDeviceFrame />
         </div>
       </div>
     </section>

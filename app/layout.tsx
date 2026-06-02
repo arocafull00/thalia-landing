@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Thalia | Software de gestión para clínicas estéticas",
   description:
     "Agenda, pacientes, inventario, equipo y finanzas en una sola plataforma para clínicas estéticas.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

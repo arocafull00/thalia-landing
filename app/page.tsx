@@ -12,12 +12,6 @@ import { WaitlistSection } from "./components/waitlist-section";
 export default function Home() {
   return (
     <>
-      <a
-        href="#contenido-principal"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[var(--z-dialog)] focus:rounded-lg focus:bg-soft-black focus:px-4 focus:py-2 focus:text-on-primary"
-      >
-        Saltar al contenido
-      </a>
       <SiteHeader />
       <main id="contenido-principal">
         <HeroSection />

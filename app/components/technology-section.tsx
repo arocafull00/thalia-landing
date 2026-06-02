@@ -37,6 +37,7 @@ export function TechnologySection() {
         description="Planifica la semana, reparte citas entre profesionales y responde a imprevistos desde el móvil, con la misma información que en recepción."
         features={agendaFeatures}
         imagePosition="center-bottom"
+        reversed
       />
     </>
   );

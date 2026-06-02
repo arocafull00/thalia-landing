@@ -1,37 +1,38 @@
+import Link from "next/link";
 import { sectionIds } from "../lib/sections";
-import { Button } from "./ui/button";
 import { Reveal } from "./ui/reveal";
 
 export function CtaBanner() {
   return (
     <section
       id={sectionIds.demo}
-      className="py-16 lg:py-20"
+      className="bg-inverse-surface py-20 lg:py-28"
       aria-labelledby="cta-heading"
     >
       <div className="container-page">
-        <Reveal variant="scale">
-          <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-inverse-surface px-8 py-10 md:flex-row md:items-center md:px-12 md:py-12">
-          <div className="max-w-xl">
+        <Reveal variant="up">
+          <div className="max-w-3xl">
             <h2
               id="cta-heading"
-              className="text-headline text-inverse-on-surface"
+              className="text-display min-w-0 text-inverse-on-surface"
             >
               Olvida el papel. Empieza a gestionar tu clínica de verdad.
             </h2>
-            <p className="text-body-lg mt-3 text-inverse-on-surface/80">
+            <p className="text-body-lg mt-6 max-w-xl text-inverse-on-surface/80">
               Solicita una demo y revisa cómo encaja Thalia con tu agenda y tu
               equipo actual.
             </p>
-          </div>
-          <div className="flex shrink-0 flex-col items-start gap-2">
-            <Button href={`#${sectionIds.demo}`} variant="inverse">
-              Solicitar demo gratuita
-            </Button>
-            <p className="text-caption text-inverse-on-surface/70">
-              Sin compromiso
-            </p>
-          </div>
+            <div className="mt-10">
+              <Link
+                href={`#${sectionIds.demo}`}
+                className="pressable inline-flex min-h-11 items-center justify-center gap-2 rounded border border-surface-container-lowest px-8 py-4 text-sm font-medium text-inverse-on-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-on-surface"
+              >
+                Solicitar demo gratuita →
+              </Link>
+              <p className="text-caption mt-3 text-inverse-on-surface/70">
+                Sin compromiso
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

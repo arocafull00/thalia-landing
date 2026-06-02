@@ -1,50 +1,35 @@
-import { KeyRound, Lock, Shield } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import { sectionIds } from "../lib/sections";
 import { PhoneFrame } from "./ui/device-frame";
 import { Reveal } from "./ui/reveal";
 
 type SecurityFeature = {
-  icon: LucideIcon;
   title: string;
   description: string;
 };
 
 const features: SecurityFeature[] = [
   {
-    icon: Lock,
     title: "Datos cifrados en tránsito y en reposo",
     description:
       "La información clínica y financiera viaja y se almacena con cifrado estándar del sector.",
   },
   {
-    icon: KeyRound,
     title: "Acceso por roles",
     description:
       "Recepción, profesionales y administración ven solo lo que su función requiere.",
   },
   {
-    icon: Shield,
     title: "Copias y trazabilidad",
     description:
       "Respaldo periódico y registro de acciones para auditar cambios sensibles.",
   },
 ];
 
-function SecurityFeatureRow({
-  icon: Icon,
-  title,
-  description,
-}: SecurityFeature) {
+function SecurityFeatureRow({ title, description }: SecurityFeature) {
   return (
-    <div className="flex gap-5">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-gray">
-        <Icon className="h-5 w-5 text-soft-black" aria-hidden />
-      </div>
-      <div>
-        <h3 className="text-title text-soft-black">{title}</h3>
-        <p className="text-body-lg mt-2 text-on-surface-variant">{description}</p>
-      </div>
+    <div className="border-t border-outline-variant py-6 first:border-t-0 first:pt-0">
+      <h3 className="text-title text-soft-black">{title}</h3>
+      <p className="text-body-lg mt-2 text-on-surface-variant">{description}</p>
     </div>
   );
 }
@@ -53,42 +38,40 @@ export function SecuritySection() {
   return (
     <section
       id={sectionIds.funciones}
-      className="bg-surface-container-lowest py-20 lg:py-28"
+      className="split-section border-t border-outline-variant"
       aria-labelledby="security-heading"
     >
-      <div className="container-page">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          <Reveal variant="left">
-            <PhoneFrame
-              src="/images/security-mobile.png"
-              alt="Pantalla de configuración de seguridad en Thalia"
-              fallbackLabel="Añade security-mobile.png en public/images/"
-            />
-          </Reveal>
-          <div className="space-y-10">
-            <Reveal variant="right">
-              <div className="space-y-4">
-                <h2
-                  id="security-heading"
-                  className="text-headline text-soft-black"
-                >
-                  Seguridad pensada para datos clínicos
-                </h2>
-                <p className="text-body-lg max-w-xl text-on-surface-variant">
-                  Tus fichas de pacientes y movimientos económicos merecen controles
-                  claros. Thalia separa permisos, protege el acceso y mantiene la
-                  información centralizada.
-                </p>
-              </div>
-            </Reveal>
-            <div className="space-y-8">
-              {features.map((feature, index) => (
-                <Reveal key={feature.title} delay={index * 90} variant="right">
-                  <SecurityFeatureRow {...feature} />
-                </Reveal>
-              ))}
-            </div>
+      <div className="split-panel split-panel--media flex items-center justify-center bg-surface-container-low py-12 lg:py-0">
+        <Reveal variant="left" className="w-full max-w-[320px] px-6 lg:max-w-none lg:px-12">
+          <PhoneFrame
+            src="/images/security-mobile.png"
+            alt="Pantalla de configuración de seguridad en Thalia"
+            fallbackLabel="Añade security-mobile.png en public/images/"
+          />
+        </Reveal>
+      </div>
+      <div className="split-panel split-panel--content">
+        <Reveal variant="right">
+          <div className="max-w-xl space-y-4">
+            <h2
+              id="security-heading"
+              className="text-headline min-w-0 text-soft-black"
+            >
+              Seguridad pensada para datos clínicos
+            </h2>
+            <p className="text-body-lg text-on-surface-variant">
+              Tus fichas de pacientes y movimientos económicos merecen controles
+              claros. Thalia separa permisos, protege el acceso y mantiene la
+              información centralizada.
+            </p>
           </div>
+        </Reveal>
+        <div className="mt-10 max-w-xl">
+          {features.map((feature, index) => (
+            <Reveal key={feature.title} delay={index * 90} variant="right">
+              <SecurityFeatureRow {...feature} />
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
