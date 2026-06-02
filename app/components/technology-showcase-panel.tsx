@@ -1,9 +1,16 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TechnologyFeatureItem } from "./technology-feature-item";
+import { TechnologyShowcaseCarousel } from "./technology-showcase-carousel";
 import { Reveal } from "./ui/reveal";
+
+const AUTO_ADVANCE_MS = 4000;
+
+type ShowcaseImage = {
+  src: string;
+  alt: string;
+};
 
 type ShowcaseFeature = {
   label: string;
@@ -13,8 +20,7 @@ type ShowcaseFeature = {
 type TechnologyShowcasePanelProps = {
   id?: string;
   headingId: string;
-  imageSrc: string;
-  imageAlt: string;
+  images: ShowcaseImage[];
   heading: string;
   description: string;
   features: ShowcaseFeature[];
@@ -26,8 +32,7 @@ type TechnologyShowcasePanelProps = {
 export function TechnologyShowcasePanel({
   id,
   headingId,
-  imageSrc,
-  imageAlt,
+  images,
   heading,
   description,
   features,
@@ -36,6 +41,14 @@ export function TechnologyShowcasePanel({
   reversed = false,
 }: TechnologyShowcasePanelProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % images.length);
+    }, AUTO_ADVANCE_MS);
+
+    return () => window.clearInterval(timer);
+  }, [activeIndex, images.length]);
 
   const objectPositionClass =
     imagePosition === "center-bottom"
@@ -49,13 +62,11 @@ export function TechnologyShowcasePanel({
       aria-labelledby={headingId}
     >
       <div className="split-panel split-panel--media min-h-[320px] lg:min-h-0">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
+        <TechnologyShowcaseCarousel
+          images={images}
+          activeIndex={activeIndex}
+          objectPositionClass={objectPositionClass}
           priority={priority}
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className={`object-cover ${objectPositionClass}`}
         />
       </div>
       <div className="split-panel split-panel--content bg-surface-container-low">
