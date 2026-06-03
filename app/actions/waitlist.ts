@@ -16,6 +16,13 @@ export async function submitWaitlist(email: string): Promise<WaitlistResult> {
     return { ok: false, code: "invalid" };
   }
 
+  if (
+    !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    !process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  ) {
+    return { ok: false, code: "unknown" };
+  }
+
   const cookieStore = await cookies();
   const supabase = createClient(cookieStore);
 
