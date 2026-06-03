@@ -1,6 +1,7 @@
-import { Check, Play } from "lucide-react";
+import { Check } from "lucide-react";
 import { sectionIds } from "../lib/sections";
 import { Button } from "./ui/button";
+import { FeatureVideoModal } from "./feature-video-modal";
 import { HeroDeviceFrame } from "./ui/device-frame";
 
 const trustItems = [
@@ -31,10 +32,7 @@ export function HeroSection() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href={`#${sectionIds.demo}`}>Solicitar demo</Button>
-              <Button href="#" variant="secondary" className="gap-2">
-                <Play className="h-4 w-4 fill-soft-black" aria-hidden />
-                Ver vídeo (2 min)
-              </Button>
+              <FeatureVideoModal />
             </div>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
               {trustItems.map((item) => (

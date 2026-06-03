@@ -547,6 +547,36 @@
     }
   }
 
+  .feature-video-dialog {
+    inset: 0;
+    margin: auto;
+    max-height: min(calc(100vh - 2rem), 90vh);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-soft);
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      opacity var(--duration-modal) var(--ease-out),
+      transform var(--duration-modal) var(--ease-out),
+      overlay var(--duration-modal) var(--ease-out) allow-discrete;
+
+    @starting-style {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+
+  .feature-video-dialog::backdrop {
+    background: rgb(26 26 26 / 0.4);
+    transition:
+      opacity var(--duration-modal) var(--ease-out),
+      overlay var(--duration-modal) var(--ease-out) allow-discrete;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
   .mobile-nav-link {
     opacity: 1;
     transform: translateY(0);
@@ -588,11 +618,14 @@
     .status-enter,
     .mobile-nav-dialog,
     .mobile-nav-dialog::backdrop,
+    .feature-video-dialog,
+    .feature-video-dialog::backdrop,
     .mobile-nav-link {
       transition: none;
     }
 
     .mobile-nav-dialog,
+    .feature-video-dialog,
     .mobile-nav-link,
     .status-enter {
       @starting-style {
@@ -601,7 +634,8 @@
       }
     }
 
-    .mobile-nav-dialog::backdrop {
+    .mobile-nav-dialog::backdrop,
+    .feature-video-dialog::backdrop {
       @starting-style {
         opacity: 1;
       }
