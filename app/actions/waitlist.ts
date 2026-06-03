@@ -2,17 +2,16 @@
 
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
+import { isValidEmail, normalizeEmail } from "../lib/validate-email";
 
 export type WaitlistResult =
   | { ok: true }
   | { ok: false; code: "invalid" | "duplicate" | "unknown" };
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export async function submitWaitlist(email: string): Promise<WaitlistResult> {
-  const normalized = email.trim().toLowerCase();
+  const normalized = normalizeEmail(email);
 
-  if (!normalized || !emailPattern.test(normalized)) {
+  if (!isValidEmail(email)) {
     return { ok: false, code: "invalid" };
   }
 

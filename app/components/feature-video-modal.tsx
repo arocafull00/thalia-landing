@@ -57,7 +57,7 @@ export function FeatureVideoModal() {
         onClick={openModal}
       >
         <Play className="h-4 w-4 fill-soft-black" aria-hidden />
-        Ver vídeo (2 min)
+        Ver vídeo (30 seg)
       </Button>
 
       <dialog

@@ -1,4 +1,5 @@
 import { sectionIds } from "../lib/sections";
+import { OpenAccessModalLink } from "./open-access-modal-button";
 import { Reveal } from "./ui/reveal";
 
 export function PricingSection() {
@@ -24,12 +25,9 @@ export function PricingSection() {
       </div>
       <div className="split-panel split-panel--content items-start lg:items-center">
         <Reveal delay={80}>
-          <a
-            href={`#${sectionIds.demo}`}
-            className="link-interactive text-title font-medium text-soft-black underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
-          >
+          <OpenAccessModalLink className="link-interactive text-title font-medium text-soft-black underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black">
             Solicitar demo para ver precios →
-          </a>
+          </OpenAccessModalLink>
         </Reveal>
       </div>
     </section>

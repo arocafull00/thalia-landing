@@ -1,3 +1,4 @@
+import { AccessRequestProvider } from "./components/access-request-provider";
 import { CtaBanner } from "./components/cta-banner";
 import { FaqSection } from "./components/faq-section";
 import { HeroSection } from "./components/hero-section";
@@ -11,7 +12,7 @@ import { WaitlistSection } from "./components/waitlist-section";
 
 export default function Home() {
   return (
-    <>
+    <AccessRequestProvider>
       <SiteHeader />
       <main id="contenido-principal">
         <HeroSection />
@@ -24,6 +25,6 @@ export default function Home() {
         <WaitlistSection />
       </main>
       <SiteFooter />
-    </>
+    </AccessRequestProvider>
   );
 }

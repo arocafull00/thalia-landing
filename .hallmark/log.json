@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-03",
+    "macrostructure": "Split Studio",
+    "theme": "DESIGN.md locked",
+    "enrichment": "none",
+    "brief": "Thalia landing · access request modal · scroll-padding fix"
+  },
+  {
     "date": "2026-06-02",
     "macrostructure": "Split Studio",
     "theme": "DESIGN.md locked",

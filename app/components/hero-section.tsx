@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
-import { sectionIds } from "../lib/sections";
-import { Button } from "./ui/button";
+import { OpenAccessModalButton } from "./open-access-modal-button";
 import { FeatureVideoModal } from "./feature-video-modal";
 import { HeroDeviceFrame } from "./ui/device-frame";
 
@@ -31,7 +30,7 @@ export function HeroSection() {
               administrativo.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href={`#${sectionIds.demo}`}>Solicitar demo</Button>
+              <OpenAccessModalButton>Solicitar demo</OpenAccessModalButton>
               <FeatureVideoModal />
             </div>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">

@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { sectionIds } from "../lib/sections";
+import { OpenAccessModalButton } from "./open-access-modal-button";
 import { SiteLogo } from "./site-logo";
-import { Button } from "./ui/button";
 
 const navLinks = [
   { label: "Soluciones", href: `#${sectionIds.soluciones}` },
@@ -69,12 +69,9 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="flex shrink-0 items-center gap-2">
-            <Button
-              href={`#${sectionIds.demo}`}
-              className="hidden min-h-9 px-4 py-2 text-sm md:inline-flex"
-            >
+            <OpenAccessModalButton className="hidden min-h-9 px-4 py-2 text-sm md:inline-flex">
               Solicitar demo
-            </Button>
+            </OpenAccessModalButton>
             <button
               type="button"
               className="pressable flex h-9 w-9 items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black md:hidden"
@@ -132,9 +129,9 @@ export function SiteHeader() {
             >
               Iniciar sesión
             </Link>
-            <Button href={`#${sectionIds.demo}`} onClick={closeMenu}>
+            <OpenAccessModalButton onClick={closeMenu}>
               Solicitar demo
-            </Button>
+            </OpenAccessModalButton>
           </div>
         </div>
       </dialog>

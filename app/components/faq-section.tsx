@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import { sectionIds } from "../lib/sections";
 import { Reveal } from "./ui/reveal";
 
@@ -49,17 +47,6 @@ export function FaqSection() {
             </Reveal>
           ))}
         </div>
-        <Reveal delay={210}>
-          <div className="mt-10">
-            <Link
-              href="#"
-              className="link-interactive inline-flex items-center gap-1 text-body-md font-medium text-soft-black underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-soft-black"
-            >
-              Ver todas las preguntas
-              <ChevronRight className="h-4 w-4" aria-hidden />
-            </Link>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
