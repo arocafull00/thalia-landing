@@ -3,19 +3,29 @@ import { Reveal } from "./ui/reveal";
 
 const faqEntries = [
   {
-    question: "¿Cuánto tarda la implantación?",
+    question: "¿Para qué tipo de clínicas está pensado Thalia?",
     answer:
-      "La mayoría de clínicas empieza con agenda y pacientes en el primer día. El resto de módulos se activan según tu ritmo, con acompañamiento del equipo.",
+      "Está diseñado para clínicas estéticas y dentales que necesitan coordinar agenda, pacientes, tratamientos, equipo, inventario y finanzas desde un mismo sistema.",
   },
   {
-    question: "¿Necesito instalar algo en cada ordenador?",
+    question: "¿Qué incluye el expediente de cada paciente?",
     answer:
-      "No. Thalia funciona en el navegador y en dispositivos móviles. Solo necesitas conexión a internet y usuarios configurados por rol.",
+      "Reúne sus datos, historial de citas y tratamientos, notas clínicas, archivos y una galería de imágenes con fases de antes, durante y después.",
   },
   {
-    question: "¿Puedo usarlo desde el móvil en recepción?",
+    question: "¿Cómo se relacionan los tratamientos y el inventario?",
     answer:
-      "Sí. La misma información está disponible en móvil, tablet y escritorio para que recepción y profesionales trabajen con datos actualizados.",
+      "Puedes definir la duración, el precio y los materiales habituales de cada tratamiento. Al completar una cita, Thalia descuenta esos materiales del stock y avisa si no hay suficiente.",
+  },
+  {
+    question: "¿Thalia envía recordatorios de citas?",
+    answer:
+      "Sí. La clínica puede configurar recordatorios automáticos por WhatsApp, elegir cuándo enviarlos y consultar o realizar un envío manual desde el detalle de la cita.",
+  },
+  {
+    question: "¿Puedo usarlo en varios dispositivos o clínicas?",
+    answer:
+      "Sí. Thalia funciona en el navegador y puede instalarse como aplicación en móvil, tablet y ordenador. Los usuarios con acceso a varias clínicas pueden cambiar entre ellas manteniendo separados sus datos y permisos.",
   },
 ];
 

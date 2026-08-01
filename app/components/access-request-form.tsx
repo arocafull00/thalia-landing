@@ -98,7 +98,7 @@ export function AccessRequestForm({
         className="status-enter text-body-lg font-medium text-secondary"
         role="status"
       >
-        Gracias. Te contactaremos cuando haya plazas disponibles.
+        Gracias. Te contactaremos para preparar la demo de tu clínica.
       </p>
     );
   }

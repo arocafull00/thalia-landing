@@ -8,10 +8,10 @@ import { OpenAccessModalButton } from "./open-access-modal-button";
 import { SiteLogo } from "./site-logo";
 
 const navLinks = [
-  { label: "Soluciones", href: `#${sectionIds.soluciones}` },
-  { label: "Funciones", href: `#${sectionIds.funciones}` },
+  { label: "Producto", href: `#${sectionIds.soluciones}` },
+  { label: "Equipo", href: `#${sectionIds.funciones}` },
+  { label: "Aplicación", href: `#${sectionIds.aplicacion}` },
   { label: "Precios", href: `#${sectionIds.precios}` },
-  { label: "Nosotros", href: `#${sectionIds.nosotros}` },
   { label: "FAQ", href: `#${sectionIds.faq}` },
 ];
 
@@ -70,7 +70,7 @@ export function SiteHeader() {
           </nav>
           <div className="flex shrink-0 items-center gap-2">
             <OpenAccessModalButton className="hidden min-h-9 px-4 py-2 text-sm md:inline-flex">
-              Solicitar demo
+              Ver demo
             </OpenAccessModalButton>
             <button
               type="button"
@@ -130,7 +130,7 @@ export function SiteHeader() {
               Iniciar sesión
             </Link>
             <OpenAccessModalButton onClick={closeMenu}>
-              Solicitar demo
+              Ver demo
             </OpenAccessModalButton>
           </div>
         </div>

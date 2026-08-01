@@ -1,8 +1,8 @@
 export const sectionIds = {
   soluciones: "soluciones",
   funciones: "funciones",
+  aplicacion: "aplicacion",
   precios: "precios",
-  nosotros: "nosotros",
   faq: "faq",
   demo: "demo",
   waitlist: "lista-espera",

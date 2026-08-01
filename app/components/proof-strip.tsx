@@ -9,27 +9,27 @@ type ProofItem = {
 const proofItems: ProofItem[] = [
   {
     number: "01",
-    title: "Agenda del día unificada",
+    title: "Agenda y recordatorios",
     description:
-      "Citas, reprogramaciones y profesional asignado en la misma vista.",
+      "Citas por día, semana o mes, estados y recordatorios de WhatsApp configurables.",
   },
   {
     number: "02",
-    title: "Ficha vinculada a la cita",
+    title: "Expediente clínico completo",
     description:
-      "Historial y datos de contacto del paciente junto a cada visita.",
+      "Historial, notas, archivos e imágenes de antes, durante y después en cada ficha.",
   },
   {
     number: "03",
-    title: "Stock con alertas de mínimo",
+    title: "Tratamientos conectados al stock",
     description:
-      "Entradas, salidas y avisos cuando un material baja del umbral.",
+      "Materiales por tratamiento, consumo al completar la cita y alertas de mínimo.",
   },
   {
     number: "04",
-    title: "Finanzas en el mismo panel",
+    title: "Equipo y negocio bajo control",
     description:
-      "Ingresos, gastos y cobros relacionados con la actividad de la clínica.",
+      "Horarios, permisos, ingresos, gastos y balance neto sin cambiar de herramienta.",
   },
 ];
 
@@ -56,7 +56,7 @@ export function ProofStrip() {
     >
       <div className="container-page">
         <h2 id="proof-heading" className="sr-only">
-          Qué resuelve Thalia en el día a día
+          Funciones principales del software de gestión clínica Thalia
         </h2>
         <Reveal variant="up">
           <div className="border-y border-outline-variant py-10">

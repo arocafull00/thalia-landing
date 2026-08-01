@@ -48,10 +48,10 @@ export function AccessRequestModal({ open, onClose }: AccessRequestModalProps) {
             id="access-request-title"
             className="text-title text-soft-black"
           >
-            Solicita tu demo gratuita
+            Solicita una demo de Thalia
           </h2>
           <p className="text-body-md mt-1 text-on-surface-variant">
-            Déjanos tu correo y te contactaremos para agendar la demo.
+            Déjanos tu correo y prepararemos una demo centrada en la operativa de tu clínica.
           </p>
         </div>
         <button
@@ -67,7 +67,7 @@ export function AccessRequestModal({ open, onClose }: AccessRequestModalProps) {
         <AccessRequestForm
           variant="modal"
           showBenefits
-          submitLabel="Solicitar demo"
+          submitLabel="Reservar mi demo"
           pendingLabel="Enviando…"
         />
       </div>

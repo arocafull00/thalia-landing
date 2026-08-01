@@ -14,7 +14,7 @@ export function SiteFooter() {
         <Reveal>
           <div className="max-w-[60ch]">
             <p className="text-headline italic text-soft-black">
-              Tu clínica, simplificada.
+              Toda la operativa de tu clínica, conectada.
             </p>
             <p className="text-title mt-6 text-soft-black">Thalia, 2026.</p>
             <p className="text-body-md mt-4 text-on-surface-variant">

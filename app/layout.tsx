@@ -9,9 +9,19 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Thalia | Software de gestión para clínicas estéticas",
+  applicationName: "Thalia",
+  title: "Software para clínicas estéticas y dentales | Thalia",
   description:
-    "Agenda, pacientes, inventario, equipo y finanzas en una sola plataforma para clínicas estéticas.",
+    "Gestiona agenda, pacientes, tratamientos, archivos, inventario, equipo, finanzas y recordatorios de tu clínica estética o dental desde una sola aplicación.",
+  category: "software de gestión clínica",
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Thalia",
+    title: "Software para clínicas estéticas y dentales | Thalia",
+    description:
+      "Agenda, expedientes clínicos, tratamientos, inventario, equipo, finanzas y recordatorios conectados en una sola aplicación.",
+  },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",

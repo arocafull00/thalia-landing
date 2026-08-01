@@ -17,18 +17,18 @@ export function CtaBanner() {
               id="cta-heading"
               className="text-display min-w-0 text-inverse-on-surface"
             >
-              Olvida el papel. Empieza a gestionar tu clínica de verdad.
+              Comprueba cómo encaja Thalia en tu clínica
             </h2>
             <p className="text-body-lg mt-6 max-w-xl text-inverse-on-surface/80">
-              Solicita una demo y revisa cómo encaja Thalia con tu agenda y tu
-              equipo actual. {accessRequestValueCopy}
+              Recorremos contigo la agenda, los expedientes, el inventario y la
+              gestión del equipo sobre una operativa como la tuya. {accessRequestValueCopy}
             </p>
             <div className="mt-10">
               <OpenAccessModalButton
                 variant="inverse"
                 className="min-h-11 px-8 py-4"
               >
-                Solicitar demo gratuita →
+                Ver Thalia en una demo →
               </OpenAccessModalButton>
               <p className="text-caption mt-3 text-inverse-on-surface/70">
                 Sin compromiso

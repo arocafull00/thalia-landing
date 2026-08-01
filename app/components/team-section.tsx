@@ -9,19 +9,19 @@ type TeamFeature = {
 
 const features: TeamFeature[] = [
   {
-    title: "Agenda compartida al instante",
+    title: "Agenda por profesional",
     description:
-      "Citas, cambios y profesional asignado visibles para recepción y para cada profesional sin llamadas de confirmación.",
+      "Consulta el día, la semana o el mes, filtra por profesional y detecta huecos sin cruzar varias agendas.",
   },
   {
-    title: "Ficha del paciente donde toca",
+    title: "Roles y horarios claros",
     description:
-      "Historial, tratamientos y notas de la visita accesibles en recepción y en cabina, sin capturas ni hojas sueltas.",
+      "Configura accesos para administración, recepción, profesionales y auxiliares, junto al horario de la clínica.",
   },
   {
-    title: "Cada rol ve lo que necesita",
+    title: "Varias clínicas, datos separados",
     description:
-      "Recepción, profesionales y administración trabajan sobre los mismos datos con permisos acordes a su función.",
+      "Quien trabaja en más de una clínica puede cambiar de contexto sin mezclar pacientes, permisos ni actividad.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function TeamSection() {
         <Reveal variant="left" className="w-full max-w-[320px] px-6 lg:max-w-none lg:px-12">
           <PhoneFrame
             src="/images/team-mobile.png"
-            alt="Recepción y profesional consultando la misma agenda en Thalia"
+            alt="Listado del personal de la clínica con sus especialidades en Thalia"
             fallbackLabel="Añade team-mobile.png en public/images/"
           />
         </Reveal>
@@ -57,13 +57,12 @@ export function TeamSection() {
               id="team-heading"
               className="text-headline min-w-0 text-soft-black"
             >
-              Todo el equipo con la misma información
+              Recepción, profesionales y dirección, coordinados
             </h2>
             <p className="text-body-lg text-on-surface-variant">
-              Recepción, profesionales y quien gestiona la clínica dejan de
-              contrastar WhatsApp, Excel y la agenda de papel. Thalia mantiene
-              agenda, ficha y movimientos alineados en móvil, tablet y
-              navegador.
+              Cada persona trabaja sobre la misma agenda, ficha del paciente y
+              estado de la cita. Thalia adapta el acceso según el rol y mantiene
+              la información separada por clínica.
             </p>
           </div>
         </Reveal>

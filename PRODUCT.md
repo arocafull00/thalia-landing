@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-Clinic owners and managers at aesthetic and beauty clinics in Spain (primary language: Spanish). They evaluate Thalia before their team adopts it. They are often juggling reception, professionals, inventory, and finances across spreadsheets, paper agendas, or disconnected tools. They browse on phone or laptop between patients or at end of day. They need to understand quickly whether Thalia fits how their clinic actually runs.
+Clinic owners and managers at aesthetic and dental clinics in Spain (primary language: Spanish). They evaluate Thalia before their team adopts it. They are often juggling reception, professionals, clinical records, inventory, and finances across spreadsheets, paper agendas, WhatsApp, or disconnected tools. They browse on phone or laptop between patients or at end of day. They need to understand quickly whether Thalia fits how their clinic actually runs.
 
 ## Product Purpose
 
-Thalia is clinic management software for aesthetic clinics: appointments, patient records, team coordination, inventory, finances, and treatment catalog in one place, usable on mobile, tablet, and browser.
+Thalia is clinic management software for aesthetic and dental clinics. It connects appointments, shared calendars, patient records with files and clinical images, treatments, team roles and schedules, inventory, finances, WhatsApp reminders, and multi-clinic access in one installable web application for mobile, tablet, and desktop.
 
 This repository (`thalia-landing`) is the public marketing surface for that product. Success for the first version is credibility and a clear value proposition: visitors understand what Thalia does, who it is for, and why it is trustworthy, without a hard conversion push yet. A waitlist or early-access path may appear later; it is not the primary goal of v1.
 

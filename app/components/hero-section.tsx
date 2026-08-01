@@ -4,9 +4,9 @@ import { FeatureVideoModal } from "./feature-video-modal";
 import { HeroDeviceFrame } from "./ui/device-frame";
 
 const trustItems = [
-  "Implantación en menos de 48 h",
-  "Sin permanencia",
-  "Soporte personalizado",
+  "Agenda, fichas y stock conectados",
+  "Instalable en móvil, tablet y ordenador",
+  "Roles y permisos por clínica",
 ];
 
 export function HeroSection() {
@@ -22,15 +22,16 @@ export function HeroSection() {
               id="hero-heading"
               className="text-display min-w-0 text-soft-black"
             >
-              Gestiona toda tu clínica estética desde un único lugar.
+              Software de gestión para clínicas estéticas y dentales
             </h1>
             <p className="text-body-lg mt-6 max-w-xl text-on-surface-variant">
-              Agenda, pacientes, stock, equipo y finanzas en una sola plataforma
-              diseñada para clínicas estéticas que quieren crecer sin el caos
-              administrativo.
+              Coordina agenda, expedientes clínicos, tratamientos, equipo,
+              inventario y finanzas desde una sola aplicación. Thalia conecta
+              la operativa diaria de recepción, profesionales y dirección,
+              también desde el móvil.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <OpenAccessModalButton>Solicitar demo</OpenAccessModalButton>
+              <OpenAccessModalButton>Ver Thalia en una demo</OpenAccessModalButton>
               <FeatureVideoModal />
             </div>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">

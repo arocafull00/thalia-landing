@@ -16,7 +16,7 @@ export function WaitlistSection() {
             id="waitlist-heading"
             className="text-headline min-w-0 text-soft-black"
           >
-            Sé el primero en probar Thalia
+            Solicita acceso anticipado a Thalia
           </h2>
           <p className="text-body-lg mt-4 text-on-surface-variant">
             {accessRequestValueCopy}
