@@ -9,11 +9,16 @@ import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { TechnologySection } from "./components/technology-section";
 import { WaitlistSection } from "./components/waitlist-section";
+import { faqEntries } from "./lib/faq-entries";
+import { getSiteUrl } from "./lib/site-config";
+
+const siteUrl = getSiteUrl();
 
 const softwareApplicationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Thalia",
+  url: siteUrl,
   description:
     "Software de gestión para clínicas estéticas y dentales que conecta agenda, expedientes clínicos, tratamientos, inventario, equipo, finanzas y recordatorios.",
   applicationCategory: "BusinessApplication",
@@ -35,16 +40,36 @@ const softwareApplicationJsonLd = {
   ],
 };
 
+const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqEntries.map((entry) => ({
+    "@type": "Question",
+    name: entry.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: entry.answer,
+    },
+  })),
+};
+
+function serializeJsonLd(data: Record<string, unknown>) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 export default function Home() {
   return (
     <AccessRequestProvider>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationJsonLd).replace(
-            /</g,
-            "\\u003c",
-          ),
+          __html: serializeJsonLd(softwareApplicationJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(faqPageJsonLd),
         }}
       />
       <SiteHeader />

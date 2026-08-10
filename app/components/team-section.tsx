@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { sectionIds } from "../lib/sections";
-import { PhoneFrame } from "./ui/device-frame";
 import { Reveal } from "./ui/reveal";
 
 type TeamFeature = {
@@ -41,14 +41,14 @@ export function TeamSection() {
       className="split-section border-t border-outline-variant"
       aria-labelledby="team-heading"
     >
-      <div className="split-panel split-panel--media flex items-center justify-center bg-surface-container-low py-12 lg:py-0">
-        <Reveal variant="left" className="w-full max-w-[320px] px-6 lg:max-w-none lg:px-12">
-          <PhoneFrame
-            src="/images/team-mobile.png"
-            alt="Listado del personal de la clínica con sus especialidades en Thalia"
-            fallbackLabel="Añade team-mobile.png en public/images/"
-          />
-        </Reveal>
+      <div className="split-panel split-panel--media min-h-[320px] lg:min-h-0">
+        <Image
+          src="/images/person-phone-5.png"
+          alt="Profesional revisando la agenda semanal por profesional de Thalia"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover object-center"
+        />
       </div>
       <div className="split-panel split-panel--content">
         <Reveal variant="right">

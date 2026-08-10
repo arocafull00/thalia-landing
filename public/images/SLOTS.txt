@@ -1,3 +1,0 @@
-dashboard-desktop.png — 1200×800, hero escritorio
-dashboard-mobile.png — 390×844, hero móvil superpuesto
-team-mobile.png — 390×844, sección equipo coordinado
