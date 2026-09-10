@@ -1,4 +1,6 @@
 import { AccessRequestProvider } from "./components/access-request-provider";
+import { CatalogSection } from "./components/catalog-section";
+import { ContactSection } from "./components/contact-section";
 import { CtaBanner } from "./components/cta-banner";
 import { FaqSection } from "./components/faq-section";
 import { HeroSection } from "./components/hero-section";
@@ -78,9 +80,11 @@ export default function Home() {
         <ProofStrip />
         <TeamSection />
         <TechnologySection />
+        <CatalogSection />
         <PricingSection />
         <FaqSection />
         <CtaBanner />
+        <ContactSection />
         <WaitlistSection />
       </main>
       <SiteFooter />

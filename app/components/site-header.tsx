@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Aplicación", href: `#${sectionIds.aplicacion}` },
   { label: "Precios", href: `#${sectionIds.precios}` },
   { label: "FAQ", href: `#${sectionIds.faq}` },
+  { label: "Contacto", href: `#${sectionIds.contact}` },
 ];
 
 export function SiteHeader() {
