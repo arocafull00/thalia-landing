@@ -2,9 +2,11 @@ import Link from "next/link";
 import { Reveal } from "./ui/reveal";
 
 const legalLinks = [
-  { label: "Aviso legal", href: "#" },
-  { label: "Privacidad", href: "#" },
-  { label: "Cookies", href: "#" },
+  { label: "Política de privacidad", href: "/privacidad" },
+  {
+    label: "Términos y condiciones",
+    href: "https://thalia-app.es/terms",
+  },
 ];
 
 export function SiteFooter() {
