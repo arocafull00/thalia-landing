@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import { AccessRequestProvider } from "./components/access-request-provider";
 import {
   getSiteUrl,
   openGraphImage,
@@ -101,7 +102,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${dmSans.variable} h-full antialiased`}>
+    <html
+      lang="es"
+      data-scroll-behavior="smooth"
+      className={`${dmSans.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans">
         <script
           type="application/ld+json"
@@ -115,7 +120,7 @@ export default function RootLayout({
             __html: serializeJsonLd(websiteJsonLd),
           }}
         />
-        {children}
+        <AccessRequestProvider>{children}</AccessRequestProvider>
       </body>
     </html>
   );

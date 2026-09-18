@@ -15,6 +15,7 @@ type RevealProps = {
   className?: string;
   delay?: number;
   variant?: RevealVariant;
+  animate?: boolean;
 };
 
 const variantClasses: Record<RevealVariant, string> = {
@@ -30,18 +31,18 @@ export function Reveal({
   className = "",
   delay = 0,
   variant = "up",
+  animate = true,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(!animate);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) {
+    if (!animate) {
       return;
     }
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVisible(true);
+    const element = ref.current;
+    if (!element) {
       return;
     }
 
@@ -60,7 +61,7 @@ export function Reveal({
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, []);
+  }, [animate]);
 
   return (
     <div

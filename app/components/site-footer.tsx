@@ -3,17 +3,14 @@ import { Reveal } from "./ui/reveal";
 
 const legalLinks = [
   { label: "Política de privacidad", href: "/privacidad" },
-  {
-    label: "Términos y condiciones",
-    href: "https://thalia-app.es/terms",
-  },
+  { label: "Términos y condiciones", href: "/terminos" },
 ];
 
-export function SiteFooter() {
+export function SiteFooter({ animate = true }: { animate?: boolean }) {
   return (
     <footer className="border-t border-outline-variant py-16 lg:py-20">
       <div className="container-page">
-        <Reveal>
+        <Reveal animate={animate}>
           <div className="max-w-[60ch]">
             <p className="text-headline italic text-soft-black">
               Toda la operativa de tu clínica, conectada.
@@ -24,7 +21,7 @@ export function SiteFooter() {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={120}>
+        <Reveal animate={animate} delay={120}>
           <div className="mt-12 flex flex-col gap-6 border-t border-outline-variant pt-8 text-caption text-on-surface-variant md:flex-row md:flex-wrap md:items-center md:gap-x-6 md:gap-y-3">
             <p>© {new Date().getFullYear()} Thalia. Todos los derechos reservados.</p>
             <ul className="flex flex-wrap gap-x-6 gap-y-2">

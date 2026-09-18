@@ -1,4 +1,3 @@
-import { AccessRequestProvider } from "./components/access-request-provider";
 import { CatalogSection } from "./components/catalog-section";
 import { ContactSection } from "./components/contact-section";
 import { CtaBanner } from "./components/cta-banner";
@@ -61,7 +60,7 @@ function serializeJsonLd(data: Record<string, unknown>) {
 
 export default function Home() {
   return (
-    <AccessRequestProvider>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -88,6 +87,6 @@ export default function Home() {
         <WaitlistSection />
       </main>
       <SiteFooter />
-    </AccessRequestProvider>
+    </>
   );
 }
