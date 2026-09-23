@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./ui/reveal";
 
 const legalLinks = [
+  { label: "Aviso legal", href: "/aviso-legal" },
   { label: "Política de privacidad", href: "/privacidad" },
   { label: "Términos y condiciones", href: "/terminos" },
 ];
